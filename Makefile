@@ -11,3 +11,6 @@ EXTRA_SOURCES=
 include $(DONKEY_HOME)/src/Makefile.http.common
 
 all: server
+
+docker:
+	docker build -t aaalgo/face_search_engine .

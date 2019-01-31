@@ -9,3 +9,6 @@ RUN cd / && wget http://www.aaalgo.com/public_models/face_models.tar.bz2 && tar 
 #RUN git clone https://github.com/aaalgo/face-search-engine && cd face-search-engine && git clone https://github.com/aaalgo/donkey
 #RUN cd face-search-engine && ./build.sh
 ENV FACE_MODELS_DIR /face_models
+RUN cd / && git clone https://github.com/aaalgo/face-search-engine && cd face-search-engine && ./build.sh
+WORKDIR face-search-engine
+CMD ./app.py

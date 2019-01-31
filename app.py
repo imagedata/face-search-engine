@@ -1,28 +1,34 @@
-#! usr/bin/env python3
+#!/usr/bin/env python3
 import os
 import sys
 import cv2
-import fawn
 import hashlib
+import struct
 
+from pyseeta import Detector
 import face_detect_vectorize as fdv
 import tensorflow as tf
 import numpy as np
 
 from datetime import timedelta
-from pyseeta import Detector
 from flask import Flask, render_template, request, send_from_directory
+import donkey
 
-
-# app
-app = Flask(__name__)
+FACE_MODELS_DIR = os.environ.get("FACE_MODELS_DIR", './face_models')
+DETECTOR_MODEL_PATH = os.path.join(FACE_MODELS_DIR, 'detector/seeta_fd_frontal_v1.0-c4619d06.bin')
+FEATURE_MODEL_PATH = os.path.join(FACE_MODELS_DIR, 'feature/model-20180402-114759')
 
 # Global variables
 IMAGE_SZ = 160
-MODEL_PATH = '20180402-114759/model-20180402-114759'
-client = fawn.Fawn('http://127.0.0.1:8888')
+DIM = 512
 
-model = fdv.Model(path=MODEL_PATH, image_size=IMAGE_SZ)
+# feature search engine
+client = donkey.Server('donkey.xml', True)
+
+detector = Detector(DETECTOR_MODEL_PATH)
+detector.set_min_face_size(30)
+
+model = fdv.Model(FEATURE_MODEL_PATH, image_size=IMAGE_SZ)
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
@@ -34,12 +40,10 @@ model.loader(sess)
 print("Done!\n")
 
 # pyseeta detector
-detector = Detector()
-detector.set_min_face_size(30)
 
+app = Flask(__name__)
 # cache time
 app.send_file_max_age_default = timedelta(seconds=1)
-
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
@@ -50,8 +54,7 @@ def main():
         image = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
 
         uniqueCode = hashlib.sha1(image).hexdigest()[:16]
-        basepath = "/home/ubuntu/face-search-engine"
-        directory = os.path.join(basepath, 'static/images', str(uniqueCode))
+        directory = os.path.join('static/images', str(uniqueCode))
         fileUniqueName = str(uniqueCode) + '.jpg'
         os.system("mkdir -p %s" % directory)
         cv2.imwrite(os.path.join(directory, fileUniqueName), image)
@@ -70,11 +73,18 @@ def main():
         count = 0
 
         for feature in face.face_features:
-            tmp = client.search(feature.reshape(512), K=10)
+            feature = feature.reshape(DIM)
+            query = {'db': 1,
+                     'K': 10,
+                     'raw': False,
+                     'content': struct.pack('%df' % DIM, *feature),
+                     'url': '',
+                     'type': ''}
+            tmp = client.search(query)
             out = []
             org_url = []
             score = []
-            for f in tmp:
+            for f in tmp['hits']:
                 key = f['key']
                 score.append(round(f['score'], 3))
                 out.append(key + '.png')
@@ -94,12 +104,14 @@ def main():
 
 @app.route('/<path:path>')
 def send_img(path):
-    return send_from_directory('/home/ubuntu/face-search-engine/',path)
+    return send_from_directory('.',path)
 
 
 if __name__ == '__main__':
     # app.debug = True
-    app.run(host='0.0.0.0', port=eval(sys.argv[1]), debug=True)
+    # app
+
+    app.run(host='0.0.0.0', port=8888, debug=True, use_reloader=False)
 
 
  

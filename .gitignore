@@ -5,3 +5,9 @@ __pycache__/
 20180402-114759/
 
 .DS_Store
+
+# Ignore temp images
+static/images/*
+
+#Ignore db
+db/*

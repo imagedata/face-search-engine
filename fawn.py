@@ -26,9 +26,12 @@ class Fawn:
         if 'K' in kwargs:
             K = kwargs['K']
             pass
+        if 'db' in kwargs:
+            db = kwargs['db']
+            pass
 
         req = {
-            'db': DB,
+            'db': db,
             'raw': False,
             'type': '',
             'K': K,
@@ -38,6 +41,10 @@ class Fawn:
             'url': '',
             'content': base64.b64encode(buf),
         }
+        if 'db' in kwargs:
+            req['db'] = kwargs['db']
+            pass
+
         # server will return at most hint_K * faces in the image
         # print('request:')
         # print(json.dumps(req))
@@ -53,10 +60,10 @@ class Fawn:
         hits = resp['hits']
         return hits
 
-    def insert(self, key, feature, meta):
+    def insert(self, db, key, feature, meta):
         buf = struct.pack('%df' % DIM, *feature)
         req = {
-            'db': DB,
+            'db': db,
             'key': key,
             'raw': False,
             'content': base64.b64encode(buf),
@@ -64,7 +71,9 @@ class Fawn:
         }
         resp = self.session.post(self.url + '/insert', json=req)
         if resp.status_code != 200:
-            print(resp.status_code)
+          #  print(resp.status_code)
+            #print(resp.text)
+            #print(resp.headers)
             raise Exception(resp.headers.get("Error", "failed to insert"))
         pass
 

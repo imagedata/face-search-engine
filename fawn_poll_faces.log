@@ -1,0 +1,332 @@
+2020-08-17 15:28:11,522  * Debugger is active!
+2020-08-17 15:28:11,537  * Debugger PIN: 117-681-951
+2020-08-17 16:13:19,731  * Detected change in '/face-search-engine/app.py', reloading
+2020-08-17 16:13:37,005  * Debugger is active!
+2020-08-17 16:13:37,006  * Debugger PIN: 117-681-951
+2020-08-17 19:51:25,384 172.17.0.1 - - [17/Aug/2020 19:51:25] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 19:51:25,866 172.17.0.1 - - [17/Aug/2020 19:51:25] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 19:51:26,434 172.17.0.1 - - [17/Aug/2020 19:51:26] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 19:51:26,772 172.17.0.1 - - [17/Aug/2020 19:51:26] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 19:51:27,386 172.17.0.1 - - [17/Aug/2020 19:51:27] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 19:51:27,837 172.17.0.1 - - [17/Aug/2020 19:51:27] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 19:51:28,181 172.17.0.1 - - [17/Aug/2020 19:51:28] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 19:51:28,496 172.17.0.1 - - [17/Aug/2020 19:51:28] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 19:51:28,809 172.17.0.1 - - [17/Aug/2020 19:51:28] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 20:13:49,662 Having problems getting parameters from fawn_driver 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "app.py", line 90, in main
+    barcode = request.json["barcode"]
+TypeError: 'NoneType' object is not subscriptable
+2020-08-17 20:13:49,664 172.16.2.251 - - [17/Aug/2020 20:13:49] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:14:30,080 Having problems getting parameters from fawn_driver 'url'
+Traceback (most recent call last):
+  File "app.py", line 91, in main
+    imgurl = request.json['url']
+KeyError: 'url'
+2020-08-17 20:14:30,081 172.16.2.251 - - [17/Aug/2020 20:14:30] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:14:59,766 172.16.2.251 - - [17/Aug/2020 20:14:59] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 20:16:12,626 172.16.2.251 - - [17/Aug/2020 20:16:12] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 20:16:20,160 172.16.2.251 - - [17/Aug/2020 20:16:20] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 20:19:06,122  * Detected change in '/face-search-engine/app.py', reloading
+2020-08-17 20:19:24,417  * Debugger is active!
+2020-08-17 20:19:24,418  * Debugger PIN: 117-681-951
+2020-08-17 20:19:38,413 172.16.2.251 - - [17/Aug/2020 20:19:38] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+2020-08-17 20:23:11,899  * Detected change in '/face-search-engine/app.py', reloading
+2020-08-17 20:23:30,212  * Debugger is active!
+2020-08-17 20:23:30,213  * Debugger PIN: 117-681-951
+2020-08-17 20:23:59,840 inserted 92079666_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/76/thumbs/92079/92079666.jpg,0.183,0.257,0.495,0.725 to http://172.16.2.180:16000
+2020-08-17 20:23:59,842 172.16.2.251 - - [17/Aug/2020 20:23:59] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:24:47,420  * Detected change in '/face-search-engine/app.py', reloading
+2020-08-17 20:25:05,597  * Debugger is active!
+2020-08-17 20:25:05,599  * Debugger PIN: 117-681-951
+2020-08-17 20:25:26,523 Cannot insert to http://172.16.2.180:16000 with 92079666_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:25:26,525 172.16.2.251 - - [17/Aug/2020 20:25:26] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:26:02,787 Cannot insert to http://172.16.2.180:16000 with 92079666_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:26:02,789 172.17.0.1 - - [17/Aug/2020 20:26:02] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:26:07,015 inserted 92079667_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/76/thumbs/92079/92079667.jpg,0.273,0.129,0.366,0.292 to http://172.16.2.180:16000 db -2
+2020-08-17 20:26:07,018 inserted 92079667_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/76/thumbs/92079/92079667.jpg,0.196,1.192,0.225,1.242 to http://172.16.2.180:16000 db -2
+2020-08-17 20:26:07,020 172.17.0.1 - - [17/Aug/2020 20:26:07] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:26:11,170 inserted 92079668_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/76/thumbs/92079/92079668.jpg,0.172,0.277,0.465,0.716 to http://172.16.2.180:16000 db -2
+2020-08-17 20:26:11,173 inserted 92079668_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/76/thumbs/92079/92079668.jpg,0.0,0.584,0.092,0.748 to http://172.16.2.180:16000 db -2
+2020-08-17 20:26:11,174 172.17.0.1 - - [17/Aug/2020 20:26:11] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:26:14,588 inserted 92079669_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/76/thumbs/92079/92079669.jpg,0.177,0.311,0.473,0.754 to http://172.16.2.180:16000 db -2
+2020-08-17 20:26:14,589 172.17.0.1 - - [17/Aug/2020 20:26:14] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:26:23,093 inserted 94739939_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739939.jpg,0.388,0.832,0.424,0.88 to http://172.16.2.180:16000 db -2
+2020-08-17 20:26:23,094 172.17.0.1 - - [17/Aug/2020 20:26:23] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:26:31,894 172.17.0.1 - - [17/Aug/2020 20:26:31] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:26:39,039 172.17.0.1 - - [17/Aug/2020 20:26:39] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:26:46,805 inserted 94739942_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739942.jpg,0.209,0.106,0.282,0.216 to http://172.16.2.180:16000 db -2
+2020-08-17 20:26:46,809 inserted 94739942_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739942.jpg,0.343,0.577,0.413,0.684 to http://172.16.2.180:16000 db -2
+2020-08-17 20:26:46,810 172.17.0.1 - - [17/Aug/2020 20:26:46] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:26:53,949 172.17.0.1 - - [17/Aug/2020 20:26:53] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:31:40,402 Cannot insert to http://172.16.2.180:16000 with 92079666_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:31:40,404 172.17.0.1 - - [17/Aug/2020 20:31:40] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:31:44,414 Cannot insert to http://172.16.2.180:16000 with 92079667_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:31:44,415 172.17.0.1 - - [17/Aug/2020 20:31:44] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:31:48,489 Cannot insert to http://172.16.2.180:16000 with 92079668_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:31:48,490 172.17.0.1 - - [17/Aug/2020 20:31:48] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:31:51,823 Cannot insert to http://172.16.2.180:16000 with 92079669_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:31:51,824 172.17.0.1 - - [17/Aug/2020 20:31:51] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:31:59,933 Cannot insert to http://172.16.2.180:16000 with 94739939_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:31:59,935 172.17.0.1 - - [17/Aug/2020 20:31:59] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:32:08,002 172.17.0.1 - - [17/Aug/2020 20:32:08] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:32:15,051 172.17.0.1 - - [17/Aug/2020 20:32:15] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:32:22,904 Cannot insert to http://172.16.2.180:16000 with 94739942_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:32:22,905 172.17.0.1 - - [17/Aug/2020 20:32:22] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:32:29,656 172.17.0.1 - - [17/Aug/2020 20:32:29] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:32:37,830 inserted 94739944_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739944.jpg,0.823,0.063,0.906,0.118 to http://172.16.2.180:16000 db -2
+2020-08-17 20:32:37,833 inserted 94739944_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739944.jpg,0.741,0.168,0.805,0.211 to http://172.16.2.180:16000 db -2
+2020-08-17 20:32:37,834 172.17.0.1 - - [17/Aug/2020 20:32:37] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:32:45,089 172.17.0.1 - - [17/Aug/2020 20:32:45] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:32:53,644 inserted 94739946_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739946.jpg,0.457,0.093,0.538,0.15 to http://172.16.2.180:16000 db -2
+2020-08-17 20:32:53,645 172.17.0.1 - - [17/Aug/2020 20:32:53] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:34:05,582 Cannot insert to http://172.16.2.180:16000 with 92079666_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:34:05,584 172.17.0.1 - - [17/Aug/2020 20:34:05] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:34:09,488 Cannot insert to http://172.16.2.180:16000 with 92079667_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:34:09,490 172.17.0.1 - - [17/Aug/2020 20:34:09] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:34:32,586 Cannot insert to http://172.16.2.180:16000 with 92079666_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:34:32,588 172.17.0.1 - - [17/Aug/2020 20:34:32] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:34:36,701 Cannot insert to http://172.16.2.180:16000 with 92079667_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:34:36,702 172.17.0.1 - - [17/Aug/2020 20:34:36] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:34:40,466 Cannot insert to http://172.16.2.180:16000 with 92079668_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:34:40,467 172.17.0.1 - - [17/Aug/2020 20:34:40] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:34:44,033 Cannot insert to http://172.16.2.180:16000 with 92079669_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:34:44,034 172.17.0.1 - - [17/Aug/2020 20:34:44] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:34:51,760 Cannot insert to http://172.16.2.180:16000 with 94739939_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:34:51,762 172.17.0.1 - - [17/Aug/2020 20:34:51] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:34:59,776 172.17.0.1 - - [17/Aug/2020 20:34:59] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:35:06,864 172.17.0.1 - - [17/Aug/2020 20:35:06] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:35:14,658 Cannot insert to http://172.16.2.180:16000 with 94739942_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:35:14,660 172.17.0.1 - - [17/Aug/2020 20:35:14] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:35:21,686 172.17.0.1 - - [17/Aug/2020 20:35:21] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:35:29,493 Cannot insert to http://172.16.2.180:16000 with 94739944_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:35:29,494 172.17.0.1 - - [17/Aug/2020 20:35:29] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:36:25,527 172.16.2.251 - - [17/Aug/2020 20:36:25] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:48:13,589 Cannot insert to http://172.16.2.180:16000 with 92079666_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:48:13,591 172.17.0.1 - - [17/Aug/2020 20:48:13] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:48:17,815 Cannot insert to http://172.16.2.180:16000 with 92079667_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:48:17,817 172.17.0.1 - - [17/Aug/2020 20:48:17] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:48:21,489 Cannot insert to http://172.16.2.180:16000 with 92079668_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:48:21,491 172.17.0.1 - - [17/Aug/2020 20:48:21] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:48:24,663 Cannot insert to http://172.16.2.180:16000 with 92079669_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:48:24,664 172.17.0.1 - - [17/Aug/2020 20:48:24] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:48:33,000 Cannot insert to http://172.16.2.180:16000 with 94739939_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:48:33,002 172.17.0.1 - - [17/Aug/2020 20:48:33] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:48:41,809 172.17.0.1 - - [17/Aug/2020 20:48:41] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:48:49,302 172.17.0.1 - - [17/Aug/2020 20:48:49] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:48:56,499 Cannot insert to http://172.16.2.180:16000 with 94739942_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:48:56,501 172.17.0.1 - - [17/Aug/2020 20:48:56] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:49:03,310 172.17.0.1 - - [17/Aug/2020 20:49:03] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:49:11,460 Cannot insert to http://172.16.2.180:16000 with 94739944_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:49:11,461 172.17.0.1 - - [17/Aug/2020 20:49:11] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:49:18,881 172.17.0.1 - - [17/Aug/2020 20:49:18] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:49:27,411 Cannot insert to http://172.16.2.180:16000 with 94739946_0 key already exists
+Traceback (most recent call last):
+  File "app.py", line 154, in main
+    client.insert(db,key,feature_reshape,meta)
+  File "/face-search-engine/fawn.py", line 70, in insert
+    raise Exception(resp.headers.get("Error", "failed to insert"))
+Exception: key already exists
+2020-08-17 20:49:27,413 172.17.0.1 - - [17/Aug/2020 20:49:27] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:49:34,154 172.17.0.1 - - [17/Aug/2020 20:49:34] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:49:40,522 172.17.0.1 - - [17/Aug/2020 20:49:40] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:49:47,063 inserted 94739949_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739949.jpg,0.812,0.067,0.905,0.129 to http://172.16.2.180:16000 db -2
+2020-08-17 20:49:47,064 172.17.0.1 - - [17/Aug/2020 20:49:47] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:49:51,836 inserted 94739950_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739950.jpg,0.532,0.897,0.627,1.041 to http://172.16.2.180:16000 db -2
+2020-08-17 20:49:51,839 inserted 94739950_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739950.jpg,0.276,0.129,0.365,0.265 to http://172.16.2.180:16000 db -2
+2020-08-17 20:49:51,840 172.17.0.1 - - [17/Aug/2020 20:49:51] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:49:56,817 inserted 94739951_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739951.jpg,0.29,0.127,0.37,0.251 to http://172.16.2.180:16000 db -2
+2020-08-17 20:49:56,818 172.17.0.1 - - [17/Aug/2020 20:49:56] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:50:01,214 inserted 94739952_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739952.jpg,0.3,0.163,0.428,0.359 to http://172.16.2.180:16000 db -2
+2020-08-17 20:50:01,216 172.17.0.1 - - [17/Aug/2020 20:50:01] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:50:06,437 inserted 94739953_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739953.jpg,0.249,0.16,0.378,0.353 to http://172.16.2.180:16000 db -2
+2020-08-17 20:50:06,438 172.17.0.1 - - [17/Aug/2020 20:50:06] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:50:10,644 inserted 94739954_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739954.jpg,0.21,0.549,0.42,0.725 to http://172.16.2.180:16000 db -2
+2020-08-17 20:50:10,647 inserted 94739954_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739954.jpg,0.705,0.067,0.805,0.151 to http://172.16.2.180:16000 db -2
+2020-08-17 20:50:10,648 172.17.0.1 - - [17/Aug/2020 20:50:10] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:50:18,197 172.17.0.1 - - [17/Aug/2020 20:50:18] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:50:25,693 inserted 94739956_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739956.jpg,0.43,0.156,0.503,0.261 to http://172.16.2.180:16000 db -2
+2020-08-17 20:50:25,696 inserted 94739956_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739956.jpg,0.13,0.581,0.194,0.671 to http://172.16.2.180:16000 db -2
+2020-08-17 20:50:25,697 172.17.0.1 - - [17/Aug/2020 20:50:25] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:50:33,317 inserted 94739957_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739957.jpg,0.293,0.149,0.377,0.275 to http://172.16.2.180:16000 db -2
+2020-08-17 20:50:33,318 172.17.0.1 - - [17/Aug/2020 20:50:33] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:50:45,635 inserted 94739958_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739958.jpg,0.312,0.138,0.371,0.173 to http://172.16.2.180:16000 db -2
+2020-08-17 20:50:45,638 inserted 94739958_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739958.jpg,0.089,0.303,0.139,0.333 to http://172.16.2.180:16000 db -2
+2020-08-17 20:50:45,639 172.17.0.1 - - [17/Aug/2020 20:50:45] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:51:01,179 172.17.0.1 - - [17/Aug/2020 20:51:01] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:51:08,567 inserted 94739960_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739960.jpg,0.809,0.416,0.854,0.45 to http://172.16.2.180:16000 db -2
+2020-08-17 20:51:08,569 172.17.0.1 - - [17/Aug/2020 20:51:08] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:51:17,522 172.17.0.1 - - [17/Aug/2020 20:51:17] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:51:24,973 172.17.0.1 - - [17/Aug/2020 20:51:24] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:51:36,507 172.17.0.1 - - [17/Aug/2020 20:51:36] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:51:46,146 172.17.0.1 - - [17/Aug/2020 20:51:46] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:51:55,791 172.17.0.1 - - [17/Aug/2020 20:51:55] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:06,937 inserted 94739966_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739966.jpg,0.138,0.113,0.204,0.201 to http://172.16.2.180:16000 db -2
+2020-08-17 20:52:06,940 inserted 94739966_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739966.jpg,0.596,0.44,0.604,0.452 to http://172.16.2.180:16000 db -2
+2020-08-17 20:52:06,941 172.17.0.1 - - [17/Aug/2020 20:52:06] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:15,892 inserted 94739967_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739967.jpg,0.828,0.276,0.883,0.313 to http://172.16.2.180:16000 db -2
+2020-08-17 20:52:15,894 172.17.0.1 - - [17/Aug/2020 20:52:15] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:21,175 172.17.0.1 - - [17/Aug/2020 20:52:21] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:28,841 inserted 94739969_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/90/thumbs/94739/94739969.jpg,1.177,0.247,1.298,0.33 to http://172.16.2.180:16000 db -2
+2020-08-17 20:52:28,842 172.17.0.1 - - [17/Aug/2020 20:52:28] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:37,186 172.17.0.1 - - [17/Aug/2020 20:52:37] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:41,962 inserted 90482101_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/20/thumbs/90482/90482101.jpg,0.307,0.13,0.392,0.259 to http://172.16.2.180:16000 db -2
+2020-08-17 20:52:41,963 172.17.0.1 - - [17/Aug/2020 20:52:41] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:44,916 inserted 90482102_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/20/thumbs/90482/90482102.jpg,0.369,0.165,0.455,0.295 to http://172.16.2.180:16000 db -2
+2020-08-17 20:52:44,918 172.17.0.1 - - [17/Aug/2020 20:52:44] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:48,689 inserted 90482103_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/20/thumbs/90482/90482103.jpg,0.229,0.312,0.292,0.407 to http://172.16.2.180:16000 db -2
+2020-08-17 20:52:48,692 inserted 90482103_1 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/20/thumbs/90482/90482103.jpg,0.416,0.305,0.47,0.385 to http://172.16.2.180:16000 db -2
+2020-08-17 20:52:48,693 172.17.0.1 - - [17/Aug/2020 20:52:48] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:52,154 172.17.0.1 - - [17/Aug/2020 20:52:52] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:52:55,633 172.17.0.1 - - [17/Aug/2020 20:52:55] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:53:00,148 inserted 90482106_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/20/thumbs/90482/90482106.jpg,0.282,0.135,0.363,0.256 to http://172.16.2.180:16000 db -2
+2020-08-17 20:53:00,149 172.17.0.1 - - [17/Aug/2020 20:53:00] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:53:07,614 172.17.0.1 - - [17/Aug/2020 20:53:07] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:53:12,641 172.17.0.1 - - [17/Aug/2020 20:53:12] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:53:16,092 172.17.0.1 - - [17/Aug/2020 20:53:16] "[37mPOST / HTTP/1.1[0m" 200 -
+2020-08-17 20:53:23,551 inserted 95950681_0 https://s3-eu-west-1.amazonaws.com/ids-storage-uk/122/thumbs/95950/95950681.jpg,0.282,0.203,0.423,0.413 to http://172.16.2.180:16000 db -2
+2020-08-17 20:53:23,552 172.17.0.1 - - [17/Aug/2020 20:53:23] "[37mPOST / HTTP/1.1[0m" 200 -

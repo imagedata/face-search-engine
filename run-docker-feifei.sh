@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --rm -it --name face_search_engine_production -p 18880:8888 -v /home/frong/face-search-engine-production:/face-search-engine face-search-engine-production /bin/bash
+docker run --rm -it --name face_feature_extractor -p 18881:8888 -v /home/frong/face-feature-extractor:/face-search-engine face-feature-extractor /bin/bash
